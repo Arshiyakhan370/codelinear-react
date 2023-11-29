@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 const HomePage = () => {
   return (
     <Fragment>
-      <div className="flex justify-between   px-11 py-11">
+      <div className="flex justify-between mt-[7%]  px-11 py-11">
         <div>
-          <h1 className="text-8xl">PROPELLING THE</h1>
-          <h1 className="text-8xl"> WORLD, BY DESIGN.</h1>
+          <h1 className="text-7xl">PROPELLING THE </h1>
+          <h1 className="text-7xl"> WORLD, BY DESIGN.</h1>
         </div>
-        <ul className="flex flex-col space-y-1 mt-12 items-left">
+        <ul className="flex flex-col space-y-1 mt-12 items-left ">
           <li className="text-black font-bold text-lg">introduction</li>
           <li className="text-gray-500 text-m">
             <Link to="#">

@@ -12,7 +12,7 @@ function App() {
     <HomePage/>
     <WhiteSpace/>
     <AboutPage/>
-    {/* <Services/> */}
+    <Services/>
     </div>
   );
 }

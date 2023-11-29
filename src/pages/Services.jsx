@@ -4,7 +4,7 @@ const Services = () => {
   return (
     <Fragment>
       <div>
-        <h1>SERVICES</h1>
+        <h1 className="text-8xl px-4 py-11">SERVICES</h1>
         <h5>
           Id donec rutrum mauris venenatis ac. Id metus lorem mus sit magna
         </h5>
