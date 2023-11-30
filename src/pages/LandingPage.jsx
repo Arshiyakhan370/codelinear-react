@@ -4,6 +4,10 @@ import Navbar from '../components/LandingPageComponents/Navbar'
 import WhiteSpace from '../components/LandingPageComponents/WhiteSpace'
 import Services from '../components/LandingPageComponents/Services'
 import AboutSection from '../components/LandingPageComponents/AboutSection'
+import Portfolio from '../components/LandingPageComponents/Portfolio'
+import Industries from '../components/LandingPageComponents/Industries'
+import Footer from '../components/LandingPageComponents/Footer'
+import LetsTalkSection from '../components/LandingPageComponents/LetsTalkSection'
 
 const LandingPage = () => {
     const [myState, setMyState] = useState(false);
@@ -14,6 +18,10 @@ const LandingPage = () => {
             <WhiteSpace />
             <AboutSection SetStateFun={setMyState}/>
             <Services />
+            <Portfolio/>
+            <Industries SetStateFun={setMyState}/>
+            <LetsTalkSection/>
+            <Footer/>
         </Fragment>
     )
 }

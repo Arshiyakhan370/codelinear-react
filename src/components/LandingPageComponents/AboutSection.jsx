@@ -6,13 +6,15 @@ const AboutSection = ({SetStateFun}) => {
 return (
     <div>
       <div
-        className=" mt-[7%] mb-1 flex justify-center w-screen cursor-pointer"
+        className=" mt-[3%] mb-1  cursor-pointer" 
         onMouseEnter={() => {setIsHovered(true);SetStateFun(true)}}
         onMouseLeave={() => {setIsHovered(false);SetStateFun(false)}}
       >
-        <img src={isHovered ? image2 : image1} alt="Logo" className="w-[87%]" />
+        <img src={isHovered ? image2 : image1} alt="Logo" className="" />
       </div>
+      <div className="mt-[-1px]border-t border-gray-600 w-full h-1 "></div>
     </div>
+    
   );
 };
 

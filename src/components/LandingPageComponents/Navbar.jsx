@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import logoImage from "../../assets/images/logo (1).png";
 import { gsap } from "gsap";
+import { logo } from "../../assets/images/logoSvg";
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -76,8 +76,9 @@ const Navbar = () => {
     <nav className="ml-[5%] mr-[7%] ">
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
-          <div>
-            <img src={logoImage} alt="Logo" className="w-25 h-12  fixed top-0" />
+        <div class="w-[99.361px] h-[45.706px] flex-shrink-0">
+           
+            {logo}
           </div>
           <div className="flex items-center space-x-4  ">
             <ul className={`flex ${isMenuOpen ? 'space-x-4' : 'hidden'}`}>
