@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logoImage from "../assets/images/logo (1).png";
+import logoImage from "../../assets/images/logo (1).png";
 import { gsap } from "gsap";
 
 const Navbar = () => {

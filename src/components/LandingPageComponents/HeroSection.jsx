@@ -1,9 +1,11 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const HomePage = () => {
+const HeroSection = ({myState}) => {
   const [isSticky, setSticky] = useState(false);
   const [offset, setOffset] = useState(0);
+
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +39,7 @@ const HomePage = () => {
             isSticky ? "fixed top-14 mt-10" : "absolute mt-[-8%]"
           } flex flex-col space-y-[-1px] right-[6%] items-left `}
         >
-          <li className="text-black text-lg">introduction</li>
+          <li className={`${myState ? "text-gray-500" : "text-black"} text-lg `}>introduction</li>
           <li className="text-gray-500 text-xs">
             <Link to="#">
               <span className="inline-block w-[40px] h-[2px] bg-gray-500 mb-1 mr-2"></span>
@@ -64,9 +66,9 @@ const HomePage = () => {
           </li>
         </ul>
       </div>
-      {/* Rest of your content */}
+      {/* Rest */}
     </Fragment>
   );
 };
 
-export default HomePage;
+export default HeroSection;
