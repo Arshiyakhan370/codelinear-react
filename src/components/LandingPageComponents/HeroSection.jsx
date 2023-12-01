@@ -32,7 +32,6 @@ const HeroSection = ({ myState }) => {
           <h1 className="text-[#100E0E] font-almarai text-7xl font-normal ml-[4%] uppercase">PROPELLING THE WORLD, BY DESIGN. </h1>
           
         </div>
-       
         <ul
           className={` ${
             isSticky ? "fixed top-10 " : "absolute mt-[-20%]"

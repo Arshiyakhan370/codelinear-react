@@ -81,7 +81,7 @@ const Navbar = () => {
             {logo}
           </div>
           {/* position of navmenu fiesd here */}
-          <div className="flex items-center space-x-4 fixed right-12">
+          <div className="flex items-center space-x-4 fixed right-[10%]">
             <ul className={`flex ${isMenuOpen ? 'space-x-4' : 'hidden'}  mt-10`}>
               <li className="mt-7 text-xs">about Us</li>
               <li className="mt-7 text-xs">services</li>
@@ -90,7 +90,7 @@ const Navbar = () => {
             </ul>
             <button className="text-black focus:outline-none mt-10">
               <svg
-                className="h-12 w-12 fixed cursor-pointer"
+                className="h-12 w-12 fixed right-[6%] cursor-pointer"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
