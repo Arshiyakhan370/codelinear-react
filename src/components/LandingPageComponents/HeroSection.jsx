@@ -68,7 +68,6 @@ const HeroSection = ({ myState }) => {
           </li>
         </ul>
         </div>
-      
     </Fragment>
   );
 };

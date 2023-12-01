@@ -3,19 +3,32 @@ import React from "react";
 import image1 from "../../assets/images/iStock-1348120238 1.png";
 
 const AboutSection = () => {
- 
+
   const handleHover = () => {
-    gsap.to(document.body, {
-      backgroundColor: " conic-gradient(from 174deg at 44.4% 50%, #D4A381 43.31266522407532deg, #46200D 360deg)",
+    gsap.to(document.getElementsByClassName('myClass')[0], {
+      background: "conic-gradient(from 178deg at 44.4% 50%, #D4A381 43.31266522407532deg, #46200D 360deg)",
+      color: 'initial',
+      duration: 1,
+      ease: 'power2.inOut',
+    });
+
+    gsap.to(document.getElementsByClassName('mainHeading')[0], {
+      color: 'white',
       duration: 0.5,
       ease: 'power2.inOut',
     });
   };
 
   const handleMouseLeave = () => {
-    gsap.to(document.body, {
-      backgroundColor: 'initial',
-      color: 'initial', 
+    gsap.to(document.getElementsByClassName('myClass')[0], {
+      background: 'initial',
+      color: 'initial',
+      duration: 1,
+      ease: 'power2.inOut',
+    });
+
+    gsap.to(document.getElementsByClassName('mainHeading')[0], {
+      color: 'initial',
       duration: 0.5,
       ease: 'power2.inOut',
     });
@@ -23,12 +36,12 @@ const AboutSection = () => {
 
   return (
     <div
-      className="relative px-11 py-11 mt-[10%]  hover-effect"
+      className="relative myClass px-11 py-11 mt-[10%]  hover-effect border border-red-900"
       onMouseEnter={handleHover}
       onMouseLeave={handleMouseLeave}
     >
       <div className="max-w-4xl">
-        <h1 className="text-[#100E0E] font-almarai text-7xl font-normal uppercase">
+        <h1 className="text-[#100E0E] font-almarai mainHeading text-7xl font-normal uppercase">
           Amet magnis diam varius viverra at
         </h1>
       </div>
@@ -40,7 +53,7 @@ const AboutSection = () => {
       </div>
 
       <div className="flex">
-        <img src={image1} alt="Logo" className="w-[550px] h-[500.5px] mb-20" />
+        <img src={image1} alt="Logo" className="w-[555px] h-[500.5px] mb-20" />
         <div className="ml-[29%] mt-20 text-[#100E0E]">
           <p>ABOUT US</p>
           <div className="mt-[-25%] ml-[100%]">
