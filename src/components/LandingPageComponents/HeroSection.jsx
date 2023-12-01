@@ -35,7 +35,7 @@ const HeroSection = ({ myState }) => {
         <ul
           className={` ${
             isSticky ? "fixed top-10 " : "absolute mt-[-20%]"
-          } flex flex-col  right-[4%] items-left w-[97px] h-[230.75px] pt-[123.75px]  items-start  `}
+          } flex flex-col  right-[4%] items-left w-[97px] h-[230.75px] pt-[123.75px] z-50 items-start  `}
         >
           <li
             className={`${myState ? "text-gray-200" : "text-black"} text-lg mt-2`}

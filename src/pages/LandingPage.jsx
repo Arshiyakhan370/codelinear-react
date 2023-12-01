@@ -16,7 +16,7 @@ const LandingPage = () => {
             <Navbar />
             <HeroSection myState={myState}/>
             <WhiteSpace />
-            <AboutSection/>
+            <AboutSection myState={myState} setMyState={setMyState}/>
             <Services />
             <Portfolio/>
             <Industries SetStateFun={setMyState}/>
