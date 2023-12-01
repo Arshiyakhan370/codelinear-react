@@ -74,20 +74,21 @@ const Navbar = () => {
 
   return (
     <nav className="ml-[5%] mr-[7%] ">
-      <div className="container mx-auto">
+      <div className="container ml-[3.5%]">
         <div className="flex items-center justify-between">
-        <div class="w-[99.361px] h-[45.706px] flex-shrink-0">
+        <div class="w-[99.361px] h-[45.706px] flex-shrink-0 fixed top-0">
            
             {logo}
           </div>
-          <div className="flex items-center space-x-4  ">
-            <ul className={`flex ${isMenuOpen ? 'space-x-4' : 'hidden'}`}>
+          {/* position of navmenu fiesd here */}
+          <div className="flex items-center space-x-4 fixed right-12">
+            <ul className={`flex ${isMenuOpen ? 'space-x-4' : 'hidden'}  mt-10`}>
               <li className="mt-7 text-xs">about Us</li>
               <li className="mt-7 text-xs">services</li>
               <li className="mt-7 text-xs">works</li>
               <li className="mt-7 text-xs">Let's Talk</li>
             </ul>
-            <button className="text-black focus:outline-none">
+            <button className="text-black focus:outline-none mt-10">
               <svg
                 className="h-12 w-12 fixed cursor-pointer"
                 fill="none"
