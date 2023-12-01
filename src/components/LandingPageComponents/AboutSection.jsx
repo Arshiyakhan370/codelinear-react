@@ -1,18 +1,54 @@
 import React, { useState } from "react";
-import image2 from "../../assets/images/Component 37.png";
-import image1 from "../../assets/images/Component 37 [1].png";
-const AboutSection = ({SetStateFun}) => {
-  const [isHovered, setIsHovered] = useState(false);
+import image1 from "../../assets/images/iStock-1348120238 1.png";
+const AboutSection = ({}) => {
+  
 return (
-    <div>
-      <div
-        className=" mt-[3%] mb-1  cursor-pointer" 
-        onMouseEnter={() => {setIsHovered(true);SetStateFun(true)}}
-        onMouseLeave={() => {setIsHovered(false);SetStateFun(false)}}
-      >
-        <img src={isHovered ? image2 : image1} alt="Logo" className="" />
-      </div>
+    
+    <div className="relative px-11 py-11 mt-[10%]">
+        <div className=" max-w-4xl">
+          <h1 className="text-[#100E0E] font-almarai text-7xl font-normal uppercase">Amet magnis diam varius viverra at </h1>
+          </div>
+          <div className=" w-96  h-auto ml-[52%] mt-[4%] text-[#100E0E]">
+          <p className="mb-1 text-[16.5px]">
+            Id donec rutrum mauris venenatis ac.Id metus lorem mus sit magna
+            Varius cum proin. Accumsan volutpat natoque purus pellentesque nec
+            Ac nulla turpis consectetur. Fermentum ut non commodo lacus enim.
+          </p>
+        </div>
+   
+        <div className="flex">
+    <img src={image1} alt="Logo" className="w-[550px] h-[500.5px] " />
+    <div className="ml-[29%] mt-20 text-[#100E0E]">
+    <p>ABOUT US</p>
+    <div className="mt-[-25%] ml-[100%]"><svg xmlns="http://www.w3.org/2000/svg" width="16.482" height="19.434" viewBox="0 0 20 17" fill="none">
+  <rect x="0.138977" y="9.04883" width="1.15946" height="19.2297" transform="rotate(-90 0.138977 9.04883)" fill="#131313"/>
+  <rect x="12.3485" y="1.01855" width="1.15946" height="9.75225" transform="rotate(-38.8464 12.3485 1.01855)" fill="#131313"/>
+  <rect width="1.15946" height="9.75225" transform="matrix(0.77883 0.627235 0.627235 -0.77883 12.3484 15.9147)" fill="#131313"/>
+</svg></div>
+    <div className="mt-[-60%] ml-[58%]">
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="89" viewBox="0 0 90 89" fill="none">
+  <circle cx="44.8558" cy="44.4689" r="43.6546" transform="rotate(-90 44.8558 44.4689)" stroke="#131313" stroke-width="1"/>
+</svg></div>
+
+        
+    </div>
+</div>
+     
       <div className="mt-[-1px]border-t border-gray-600 w-full h-1 "></div>
+      <div className="flex">
+        <div className="w-1/2 p-1">
+          <h1 className="text-7xl px-1 py-11 ml-[7%] mt-[4%] text-[#100E0E]">
+            SERVICES
+          </h1>
+        </div>
+        <div className="w-[38%] h-auto p-1 mt-[5%] mr-[8%] ml-[-4%] text-[#100E0E]">
+          <p className="mb-1 text-[16.5px]">
+            Id donec rutrum mauris venenatis ac. Id metus lorem mus sit magna
+            varius cum proin. Accumsan volutpat natoque purus pellentesque nec
+            ac nulla turpis consectetur. Fermentum ut non commodo lacus enim.
+          </p>
+        </div>
+      </div>
     </div>
     
   );

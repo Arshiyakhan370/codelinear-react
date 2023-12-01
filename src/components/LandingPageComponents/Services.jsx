@@ -1,10 +1,12 @@
 import React, { Fragment } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Services = () => {
   const sections = [
     {
-      title: "Consulting ",
-      title1: " and Strategy",
+      title: "Consulting and Strategy",
       items: [
         "Market Research",
         "Stakeholder Workshops",
@@ -14,8 +16,7 @@ const Services = () => {
       ],
     },
     {
-      title: "User",
-      title1: " Experience",
+      title: "User Experience",
       items: [
         "Ux Audit",
         "UX Research",
@@ -26,8 +27,7 @@ const Services = () => {
       ],
     },
     {
-      title: "Product ",
-      title1: " Development",
+      title: "Product Development",
       items: [
         "Website Development",
         "Web App Development",
@@ -39,49 +39,37 @@ const Services = () => {
       ],
     },
     {
-      title: "Digital ",
-      title1: " Marketing",
+      title: "Digital Marketing",
       items: ["SEO", "Social Media", "Paid Search", "Paid Social"],
     },
   ];
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <Fragment>
-      <div className="flex">
-        <div className="w-1/2 p-1">
-          <h1 className="text-7xl px-1 py-11 ml-[5%]">SERVICES</h1>
-        </div>
-        <div className="w-1/2 p-1 mt-[3%] mr-[8%] ml-[7%]">
-          <h5 className="mb-1 text-s">
-            Id donec rutrum mauris venenatis ac.Id metus lorem mus sit magna
-            Varius cum proin. Accumsan volutpat natoque purus pellentesque nec
-            Ac nulla turpis consectetur. Fermentum ut non commodo lacus enim.
-          </h5>
-        </div>
-      </div>
-      <div
-        className="flex overflow-x-auto whitespace-nowrap"
-        style={{ overflowY: "scroll", scrollbarWidth: "0" }}
-      >
+      <Slider {...settings}>
         {sections.map((section, index) => (
-          <div
-            key={index}
-            className="p-6 mt-[8%] mb-[10%] mr-[20%] border-b inline-block"
-          >
-            <div className="flex-1 text-9xl font-bold uppercase ml-[5%] ">
-              <div className="block">{section.title}</div>
-              <div className="block">{section.title1}</div>
-            </div>
-
-            <ul className="flex-1 ml-[100%] text-xs text-left uppercase list-none mr-[10%] mt-[-24%]">
+          <div key={index} className="p-28">
+            <h1 className="text-9xl font-bold mb-3 mr-4 uppercase text-[#2C2C2C]">
+              {section.title}
+            </h1>
+            <ul className="text-[10px] ml-[80%] text-left  font-bold uppercase list-none mt-[-27%]  w-[18%] h-[2%] mb-0 ">
               {section.items.map((item, itemIndex) => (
-                <li key={itemIndex} className="mb-2 mr-4">
+                <li key={itemIndex} className="mb-3">
                   {item}
                 </li>
               ))}
             </ul>
           </div>
         ))}
-      </div>
+      </Slider>
     </Fragment>
   );
 };

@@ -73,15 +73,15 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <nav className="ml-[5%] mr-[7%] ">
+    <nav className="">
       <div className="container ml-[3.5%]">
         <div className="flex items-center justify-between">
-        <div class="w-[99.361px] h-[45.706px] flex-shrink-0 fixed top-0">
+        <div className="w-[99.361px] h-[45.706px] flex-shrink-0 fixed top-0">
            
             {logo}
           </div>
-          {/* position of navmenu fiesd here */}
-          <div className="flex items-center space-x-4 fixed right-[10%]">
+          
+          <div className="flex items-center space-x-4 fixed right-[8%] text-[#100E0E]">
             <ul className={`flex ${isMenuOpen ? 'space-x-4' : 'hidden'}  mt-10`}>
               <li className="mt-7 text-xs">about Us</li>
               <li className="mt-7 text-xs">services</li>
@@ -90,7 +90,7 @@ const Navbar = () => {
             </ul>
             <button className="text-black focus:outline-none mt-10">
               <svg
-                className="h-12 w-12 fixed right-[6%] cursor-pointer"
+                className="h-12 w-12 fixed right-[1%] cursor-pointer"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

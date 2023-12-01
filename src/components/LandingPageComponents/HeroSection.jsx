@@ -29,13 +29,13 @@ const HeroSection = ({ myState }) => {
     <Fragment>
       <div className="relative px-11 py-11 mt-[10%]">
         <div className=" max-w-4xl">
-          <h1 className="text-[#100E0E] font-almarai text-7xl font-normal ml-[4%] uppercase">PROPELLING THE WORLD, BY DESIGN. </h1>
+          <h1 className="text-[#100E0E] font-almarai text-7xl font-normal  uppercase">PROPELLING THE WORLD, BY DESIGN. </h1>
           
         </div>
         <ul
           className={` ${
             isSticky ? "fixed top-10 " : "absolute mt-[-20%]"
-          } flex flex-col  right-[6%] items-left w-[97px] h-[230.75px] pt-[123.75px]  items-start  `}
+          } flex flex-col  right-[4%] items-left w-[97px] h-[230.75px] pt-[123.75px]  items-start  `}
         >
           <li
             className={`${myState ? "text-gray-200" : "text-black"} text-lg mt-2`}
