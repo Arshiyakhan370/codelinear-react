@@ -14,11 +14,7 @@ const Industries = () => {
     "Manufacturing",
   ];
   
-  
-  
-  
-  
-  return (
+   return (
     
      <div className="relative px-11 py-11 mt-[12%] mb-[5%]">
         <div className=" max-w-[43%] border ml-12">
@@ -36,7 +32,7 @@ we served </h1>
         <img src={image} alt="Your Alt Text" className="ml-12 h-[550px] mt-[15%]" />
       
   
-    <div className="ml-[35%] mt-20 text-[#100E0E]">
+    <div className="ml-[38%] mt-20 text-[#100E0E]">
     <p>ABOUT US</p>
     <div className="mt-[-25%] ml-[100%]"><svg xmlns="http://www.w3.org/2000/svg" width="16.482" height="19.434" viewBox="0 0 20 17" fill="none">
   <rect x="0.138977" y="9.04883" width="1.15946" height="19.2297" transform="rotate(-90 0.138977 9.04883)" fill="#131313"/>

@@ -54,6 +54,19 @@ const Services = () => {
 
   return (
     <Fragment>
+    <div className="flex">
+        <div className="w-1/2 p-1">
+          <h1 className="text-7xl px-1 py-11 ml-[7%] mt-[4%] text-[#100E0E]">
+            SERVICES
+          </h1>
+        </div>
+        <div className="w-[38%] h-auto p-1 mt-[5%] mr-[8%] ml-[-4%] text-[#100E0E]">
+          <p className="mb-1 text-[16.5px]">
+            Id donec rutrum mauris venenatis ac. Id metus lorem mus sit magna varius cum proin. Accumsan volutpat natoque
+            purus pellentesque nec ac nulla turpis consectetur. Fermentum ut non commodo lacus enim.
+          </p>
+        </div>
+      </div>
       <Slider {...settings}>
         {sections.map((section, index) => (
           <div key={index} className="p-28">

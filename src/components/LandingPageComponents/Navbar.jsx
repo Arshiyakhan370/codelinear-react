@@ -76,12 +76,12 @@ const Navbar = () => {
     <nav className="">
       <div className="container ml-[3.5%]">
         <div className="flex items-center justify-between">
-        <div className="w-[99.361px] h-[45.706px] flex-shrink-0 fixed top-0">
+        <div className="w-[99.361px] h-[45.706px] flex-shrink-0 z-50 fixed top-0">
            
             {logo}
           </div>
           
-          <div className="flex items-center space-x-4 fixed right-[8%] text-[#100E0E]">
+          <div className="flex items-center  z-50 space-x-4 fixed right-[8%] text-[#100E0E]">
             <ul className={`flex ${isMenuOpen ? 'space-x-4' : 'hidden'}  mt-10`}>
               <li className="mt-7 text-xs">about Us</li>
               <li className="mt-7 text-xs">services</li>
