@@ -3,6 +3,20 @@ import image from "../../assets/images/shubham-dhage-05rC4c5-oWw-unsplash 2.png"
 
 
 const Industries = () => {
+  const serve = [
+    "Fintech",
+    "Technology",
+    "Ecommerce",
+    "Supply chain and logistics",
+    "Healthcare",
+    "Food and beverages",
+    "Biopharmaceutical",
+    "Manufacturing",
+  ];
+  
+  
+  
+  
   
   return (
     
@@ -19,10 +33,10 @@ we served </h1>
           </p>
         </div>
      <div className="flex mt-[-1%]">
-        <img src={image} alt="Your Alt Text" className="ml-12 h-auto mt-[15%]" />
+        <img src={image} alt="Your Alt Text" className="ml-12 h-[550px] mt-[15%]" />
       
   
-    <div className="ml-[29%] mt-20 text-[#100E0E]">
+    <div className="ml-[35%] mt-20 text-[#100E0E]">
     <p>ABOUT US</p>
     <div className="mt-[-25%] ml-[100%]"><svg xmlns="http://www.w3.org/2000/svg" width="16.482" height="19.434" viewBox="0 0 20 17" fill="none">
   <rect x="0.138977" y="9.04883" width="1.15946" height="19.2297" transform="rotate(-90 0.138977 9.04883)" fill="#131313"/>
@@ -33,9 +47,14 @@ we served </h1>
 <svg xmlns="http://www.w3.org/2000/svg" width="90" height="89" viewBox="0 0 90 89" fill="none">
   <circle cx="44.8558" cy="44.4689" r="43.6546" transform="rotate(-90 44.8558 44.4689)" stroke="#131313" stroke-width="1"/>
 </svg></div>
+</div>
 
-        
-    </div>
+<div className="text-[21px] uppercase ml-[-30%] mt-[20%] space-y-12">
+    {serve.map((industry, index) => (
+      <p key={index}>{industry}</p>
+    ))}
+  </div>;
+    
 </div>
     </div>
   );
