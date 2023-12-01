@@ -42,27 +42,27 @@ const HeroSection = ({ myState }) => {
           >
             introduction
           </li>
-          <li className="text-gray-800 text-right font-sora text-xs font-normal leading-[150%] opacity-[.5]">
+          <li className="text-gray-500 text-right font-sora text-xs font-normal leading-[150%] opacity-[.5]">
             <Link to="#">
-              <span className="inline-block opacity-50 bg-gray-800  w-[29.5px] h-[0.75px] mr-[14.90px] mb-1"></span>
+              <span className="inline-block opacity-50 bg-gray-500  w-[29.5px] h-[0.75px] mr-[14.90px] mb-1"></span>
               about us
             </Link>
           </li>
-          <li className="text-gray-800 text-right font-sora text-xs font-normal leading-[150%] opacity-[.5]">
+          <li className="text-gray-500 text-right font-sora text-xs font-normal leading-[150%] opacity-[.5]">
             <Link to="#">
-              <span className="inline-block opacity-50 bg-gray-800  w-[31.5px] h-[0.75px] mr-[14.90px] mb-1"></span>
+              <span className="inline-block opacity-50 bg-gray-500  w-[31.5px] h-[0.75px] mr-[14.90px] mb-1"></span>
               services
             </Link>
           </li>
-          <li className="text-gray-800 text-right font-sora text-xs font-normal leading-[150%] opacity-[.5]">
+          <li className="text-gray-500 text-right font-sora text-xs font-normal leading-[150%] opacity-[.5]">
             <Link to="#">
-              <span className="inline-block opacity-50 bg-gray-800  w-[45.5px] h-[0.75px] mr-[14.90px] mb-1"></span>
+              <span className="inline-block opacity-50 bg-gray-500  w-[45.5px] h-[0.75px] mr-[14.90px] mb-1"></span>
               works
             </Link>
           </li>
-          <li className="text-gray-800 text-right font-sora text-xs font-normal leading-[150%] opacity-[.5]">
+          <li className="text-gray-500 text-right font-sora text-xs font-normal leading-[150%] opacity-[.5]">
             <Link to="#">
-              <span className="inline-block opacity-50 bg-gray-800  w-[25.5px] h-[0.75px] mr-[14.90px] mb-1"></span>
+              <span className="inline-block opacity-50 bg-gray-500  w-[25.5px] h-[0.75px] mr-[14.90px] mb-1"></span>
               industries
             </Link>
           </li>
