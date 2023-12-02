@@ -13,26 +13,9 @@ const AboutSection = ({ myState, setMyState }) => {
       duration: 0.3,
       ease: "power2.inOut",
     });
-    // gsap.to(document.getElementsByClassName('mainHeading')[0], {
-    //   color: 'white',
-    //   duration: 0.5,
-    //   ease: 'power2.inOut',
-    // });
-    // gsap.to(document.getElementsByClassName('paraGraph')[0], {
-    //   color: 'white',
-    //   duration: 0.5,
-    //   ease: 'power2.inOut',
-    // });
-    // gsap.to(document.getElementsByClassName('about-us')[0], {
-    //   color: 'white',
-    //   duration: 0.5,
-    //   ease: 'power2.inOut',
-    // });
-
     animationFun("mainHeading","white")
     animationFun("paraGraph","white")
     animationFun("about-us","white")
-
   };
 
   const handleMouseLeave = () => {
@@ -43,26 +26,9 @@ const AboutSection = ({ myState, setMyState }) => {
       duration: 0.3,
       ease: "power2.inOut",
     });
-
-    // gsap.to(document.getElementsByClassName('mainHeading')[0], {
-    //   color: 'initial',
-    //   duration: 0.5,
-    //   ease: 'power2.inOut',
-    // });
-    // gsap.to(document.getElementsByClassName('paraGraph')[0], {
-    //   color: 'initial',
-    //   duration: 0.5,
-    //   ease: 'power2.inOut',
-    // });
-    // gsap.to(document.getElementsByClassName('about-us')[0], {
-    //   color: 'initial',
-    //   duration: 0.5,
-    //   ease: 'power2.inOut',
-    // });
     animationFun("mainHeading","initial")
     animationFun("paraGraph","initial")
     animationFun("about-us","initial")
-
   };
 
   return (
@@ -76,7 +42,7 @@ const AboutSection = ({ myState, setMyState }) => {
           Amet magnis diam varius viverra at
         </h1>
       </div>
-      <div className="w-96 h-auto ml-[52%] mt-[4%] text-[#100E0E]">
+      <div className="w-96 h-auto ml-[58.5%] mr-[10%] mt-[4%] text-[#100E0E]">
         <p className="mb-1 paraGraph text-[16.5px]">
           Id donec rutrum mauris venenatis ac.Id metus lorem mus sit magna
           Varius cum proin. Accumsan volutpat natoque purus pellentesque nec ac
