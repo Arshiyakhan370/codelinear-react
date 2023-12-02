@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import React from "react";
 import image1 from "../../assets/images/iStock-1348120238 1.png";
+import { animationFun } from "../GSAPanimation/GSAPaniation";
 
 const AboutSection = ({ myState, setMyState }) => {
   const handleHover = () => {
@@ -12,22 +13,26 @@ const AboutSection = ({ myState, setMyState }) => {
       duration: 0.3,
       ease: "power2.inOut",
     });
+    // gsap.to(document.getElementsByClassName('mainHeading')[0], {
+    //   color: 'white',
+    //   duration: 0.5,
+    //   ease: 'power2.inOut',
+    // });
+    // gsap.to(document.getElementsByClassName('paraGraph')[0], {
+    //   color: 'white',
+    //   duration: 0.5,
+    //   ease: 'power2.inOut',
+    // });
+    // gsap.to(document.getElementsByClassName('about-us')[0], {
+    //   color: 'white',
+    //   duration: 0.5,
+    //   ease: 'power2.inOut',
+    // });
 
-    gsap.to(document.getElementsByClassName("mainHeading")[0], {
-      color: "white",
-      duration: 0.3,
-      ease: "power2.inOut",
-    });
-    gsap.to(document.getElementsByClassName("paraGraph")[0], {
-      color: "white",
-      duration: 0.3,
-      ease: "power2.inOut",
-    });
-    gsap.to(document.getElementsByClassName("about-us")[0], {
-      color: "white",
-      duration: 0.3,
-      ease: "power2.inOut",
-    });
+    animationFun("mainHeading","white")
+    animationFun("paraGraph","white")
+    animationFun("about-us","white")
+
   };
 
   const handleMouseLeave = () => {
@@ -39,21 +44,25 @@ const AboutSection = ({ myState, setMyState }) => {
       ease: "power2.inOut",
     });
 
-    gsap.to(document.getElementsByClassName("mainHeading")[0], {
-      color: "initial",
-      duration: 0.3,
-      ease: "power2.inOut",
-    });
-    gsap.to(document.getElementsByClassName("paraGraph")[0], {
-      color: "initial",
-      duration: 0.3,
-      ease: "power2.inOut",
-    });
-    gsap.to(document.getElementsByClassName("about-us")[0], {
-      color: "initial",
-      duration: 0.3,
-      ease: "power2.inOut",
-    });
+    // gsap.to(document.getElementsByClassName('mainHeading')[0], {
+    //   color: 'initial',
+    //   duration: 0.5,
+    //   ease: 'power2.inOut',
+    // });
+    // gsap.to(document.getElementsByClassName('paraGraph')[0], {
+    //   color: 'initial',
+    //   duration: 0.5,
+    //   ease: 'power2.inOut',
+    // });
+    // gsap.to(document.getElementsByClassName('about-us')[0], {
+    //   color: 'initial',
+    //   duration: 0.5,
+    //   ease: 'power2.inOut',
+    // });
+    animationFun("mainHeading","initial")
+    animationFun("paraGraph","initial")
+    animationFun("about-us","initial")
+
   };
 
   return (
