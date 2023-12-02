@@ -4,13 +4,14 @@ const LetsTalkSection = () => {
   return (
     <Fragment>
       <div className="p-4 md:p-8 text-center md:mt-16 md:mb-32  transition duration-300">
-        <div className="text-lg md:text-2xl text-black font-bold">Wanna Know a Secret?</div>
+        <div className="text-lg md:text-2xl text-black ">Wanna Know a Secret?</div>
       </div>
-
-      <div className="relative text-4xl md:text-8xl text-center p-4 md:p-8 mb-16 md:mb-32 mt-5 md:mt-8 lg:mt-12">
-        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-500 hover:opacity-100 "style={{color:"white",textShadow:" 2px 2px 4px  gray"}}>
+     <div className=" w-full h-48">
+      <div className=" text-4xl md:text-9xl text-center p-2  md:p-8  ml-[42%] mt-28 ] ">
+        <h1 className=" top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-500 hover:opacity-100 "style={{color:"white",textShadow:" 8px 16px 32px #DCDCDC"}}>
           LET'S TALK
         </h1>
+      </div>
       </div>
     </Fragment>
   );

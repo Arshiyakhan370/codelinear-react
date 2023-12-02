@@ -3,75 +3,98 @@ import image from "../../assets/images/logo (1).png";
 import gsap from "gsap";
 
 const Footer = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isLogoVisible, setIsLogoVisible] = useState(true);
 
   useEffect(() => {
     const tl = gsap.timeline({ paused: true });
-    tl.to(".logo-image", { opacity: 0, duration: 0.3 }).to(
+    tl.to(".logo-image", { opacity: 1, duration: 4}).to(
       ".logo-text",
-      { opacity: 1, duration: 0.3 },
+      { opacity: 1, duration: 4 },
       "-=0.3"
     );
 
     const logoContainer = document.querySelector(".logo-container");
 
-    logoContainer.addEventListener("mouseenter", () => {
-      setIsHovered(true);
-      tl.play();
-    });
+   
+    setIsLogoVisible(true);
 
-    logoContainer.addEventListener("mouseleave", () => {
-      setIsHovered(false);
-      tl.reverse();
-    });
+   
+    tl.play();
 
+    
+    const interval = setInterval(() => {
+      tl.reversed() ? tl.play() : tl.reverse();
+      setIsLogoVisible((prev) => !prev);
+    }, 1000);
+
+    
     return () => {
+      clearInterval(interval);
       logoContainer.removeEventListener("mouseenter", () => {});
       logoContainer.removeEventListener("mouseleave", () => {});
     };
   }, []);
 
   return (
-    <footer className="py-4 bg-gray-200">
+    <footer className="py-4 border border-gray-200 ">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="logo-container relative mb-4 md:mb-0">
-            <img
+        <div className="flex flex-col md:flex-row justify-between items-center mt-24 ml-10">
+          <div className="logo-container relative  w-48 h-16 mb-2">
+         
+            
+          <p
+              className={`logo-text text-3xl mt-4 text-black ${isLogoVisible ? "hidden" : "block"}`}
+              style={{ opacity: isLogoVisible ? 1 : 1 }}
+            >
+              near to impact
+            </p> <img
               src={image}
               alt="Company Logo"
-              className={`w-24 h-12 mx-auto mb-4 md:ml-4 logo-image ${
-                isHovered ? "hidden" : "block"
-              }`}
+              className={`w-24 h-12 mx-auto mb-4 md:ml-2 logo-image ${isLogoVisible ? "block" : "hidden"}`}
+              style={{ opacity: isLogoVisible ? 1 : 0 }}
             />
-            <p
-              className={`logo-text text-2xl text-[#2C2C2C] ${
-                isHovered ? "block" : "hidden"
-              }`}
-              style={{ opacity: isHovered ? 1 : 0 }}
-            >
-              near <span className="text-black">to impact</span>
-            </p>
+            
           </div>
-<div className="text-center md:text-left mt-4 md:mt-0 text-sm text-black md:ml-56">
-            <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 mb-5">
-              <li>about</li>
-              <li>work </li>
-              <li>ideas</li>
-            </ul>
-            <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 ">
-              <li>services</li>
-              <li>career</li>
-              <li>Let's Talk</li>
-            </ul>
-          </div>
-           <div className="flex items-center space-x-5 mt-4 md:mt-0">
-            <div>
-              <p className="mb-2 md:mb-5"> info@codlinear.com</p>
-              <p> +14155235957</p>
-            </div>
 
-            <div className="flex space-x-5 md:mr-8 ">
-              <svg
+          
+          <div className="flex flex-col md:flex-row mt-2 md:mt-0 mb-[-2%] text-[15px] text-black md:mr-[-20%] ">
+  <div className="flex flex-col mb-4 md:mr-8 ">
+    <ul className="mb-2 md:mb-6">
+      <li>about us</li>
+    </ul>
+    <ul>
+      <li>services</li>
+    </ul>
+  </div>
+  <div className="flex flex-col mb-4 md:mr-8 ">
+    <ul className="mb-2 md:mb-6">
+      <li>work</li>
+    </ul>
+    <ul>
+      <li>career</li>
+    </ul>
+  </div>
+  <div className="flex flex-col ">
+    <ul className="mb-2 md:mb-6">
+      <li>idea</li>
+    </ul>
+    <ul>
+      <li>Let's Talk</li>
+    </ul>
+  </div>
+</div>
+
+
+<div className="flex items-center space-x-5 md:mt-0 mb-[-1%] md:mr-[-25%]">
+  <div className="text-[15px] text-center md:text-left">
+    <p className="mb-2 md:mb-6 md:mr-16 ">info@codlinear.com</p>
+    <p>+14155235957</p>
+  </div>
+</div>
+
+
+            <div className="flex flex-wrap items-start justify-start  md:justify-center space-x-0 md:space-x-5 mb-4 md:mb-8 md:mr-[-5%]">
+                   <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="21"
@@ -131,16 +154,19 @@ const Footer = () => {
                   </clipPath>
                 </defs>
               </svg>
-            </div>
+            
           </div>
         </div>
+        <div
+  className="text-center  text-[15px] text-gray-600 md:text-left mr-auto"
+  
+>
+  &copy; Codlinear 2023. All rights reserved.
+</div>
 
-        <div className="text-left mt-2 text-sm text-gray-600">
-          &copy; Codlinear 2023. All rights reserved.
-        </div>
+
       </div>
     </footer>
   );
 };
-
 export default Footer;
