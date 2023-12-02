@@ -42,7 +42,7 @@ const AboutSection = ({ myState, setMyState }) => {
           Amet magnis diam varius viverra at
         </h1>
       </div>
-      <div className="w-96 h-auto ml-[58.5%] mr-[10%] mt-[4%] text-[#100E0E]">
+      <div className="w-96 h-auto ml-[52%] mr-[60%] mt-[4%] text-[#100E0E]">
         <p className="mb-1 paraGraph text-[16.5px]">
           Id donec rutrum mauris venenatis ac.Id metus lorem mus sit magna
           Varius cum proin. Accumsan volutpat natoque purus pellentesque nec ac
@@ -52,9 +52,9 @@ const AboutSection = ({ myState, setMyState }) => {
 
       <div className="flex">
         <img src={image1} alt="Logo" className="w-[555px] h-[500.5px] mb-20" />
-        <div className="ml-[29%] mt-20 text-[#100E0E]">
+        <div className="ml-[30%] mt-20 text-[#100E0E]">
           <p className="about-us">ABOUT US</p>
-          <div className="mt-[-25%] ml-[100%]">
+          <div className="mt-[-25%] ml-[89%] mr[100%]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16.482"

@@ -77,11 +77,11 @@ const Industries = () => {
 
   return (
     <div
-      className="relative px-11 py-11 mt-[12%] mb-[5%] hover-effect"
+      className="relative  px-11 py-11 mt-[8%] mb-[5%] hover-effect"
       onMouseEnter={handleHover}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="max-w-[43%] ml-12 text-[#100E0E] font-almarai text-7xl font-normal uppercase mainHeading">
+      <div className="max-w-[43%] ml-12 mt-[10%] text-[#100E0E] font-almarai text-7xl font-normal uppercase mainHeading">
         Industries we served
       </div>
       <div className="w-[40%] h-auto ml-[52%] mt-[-11%] text-[#100E0E]">
@@ -150,7 +150,7 @@ const Industries = () => {
             </svg>
           </div>
         </div>
-        <div className="text-[21px] uppercase ml-[-30%] mt-[20%] space-y-12 element">
+        <div className="text-[21px] uppercase ml-[-30%]  mb-[15%] mt-[20%] space-y-12 element">
           {serve.map((industry, index) => (
             <p key={index}>{industry}</p>
           ))}
