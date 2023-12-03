@@ -6,28 +6,30 @@ const Footer = () => {
   const [isLogoVisible, setIsLogoVisible] = useState(true);
 
   useEffect(() => {
-    const tl = gsap.timeline({ paused: true });
-    tl.to(".logo-image", { opacity: 1, duration: 4}).to(
-      ".logo-text",
-      { opacity: 1, duration: 4 },
-      "-=0.3"
-    );
-
     const logoContainer = document.querySelector(".logo-container");
 
-   
-    setIsLogoVisible(true);
+    gsap.to(".logo-container", {
+      scale: 1.1,
+      duration: 1,
+      paused: true,
+      reversed: true,
+      ease: 'power3.inOut',
+    });
 
-   
-    tl.play();
-
-    
     const interval = setInterval(() => {
-      tl.reversed() ? tl.play() : tl.reverse();
       setIsLogoVisible((prev) => !prev);
+      gsap.to(".logo-container", { reversed: !isLogoVisible });
     }, 1000);
 
-    
+    // Add zoom in/out effect on mouse enter/leave
+    logoContainer.addEventListener("mouseenter", () => {
+      gsap.to(".logo-container", { scale: 1.2, duration: 0.5, ease: 'power3.inOut' });
+    });
+
+    logoContainer.addEventListener("mouseleave", () => {
+      gsap.to(".logo-container", { scale: 1, duration: 0.5, ease: 'power3.inOut' });
+    });
+
     return () => {
       clearInterval(interval);
       logoContainer.removeEventListener("mouseenter", () => {});
@@ -36,28 +38,25 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="py-4 border border-gray-200 ">
+    <footer className="py-4 border border-gray-200">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center mt-24 ml-10">
-          <div className="logo-container relative  w-48 h-16 mb-2">
-         
-            
-          <p
-              className={`logo-text text-3xl mt-4 text-black ${isLogoVisible ? "hidden" : "block"}`}
+          <div className="logo-container relative w-48 h-16 md:mb-12 lg:mb-4">
+            <p
+              className={`logo-text text-3xl mt-4 md:ml-[-8%] text-black ${isLogoVisible ? "hidden" : "block"}`}
               style={{ opacity: isLogoVisible ? 1 : 1 }}
             >
               near to impact
-            </p> <img
+            </p>
+            <img
               src={image}
               alt="Company Logo"
-              className={`w-24 h-12 mx-auto mb-4 md:ml-2 logo-image ${isLogoVisible ? "block" : "hidden"}`}
+              className={`w-24 h-12 mx-auto mb-4 md:mb-44 lg:mb-24 md:ml-[-8%] logo-image ${isLogoVisible ? "block" : "hidden"}`}
               style={{ opacity: isLogoVisible ? 1 : 0 }}
             />
-            
           </div>
-
           
-          <div className="flex flex-col md:flex-row mt-2 md:mt-0 mb-[-2%] text-[15px] text-black md:mr-[-20%] ">
+          <div className="flex flex-col md:flex-row mt-2 md:mt-0 mb-[-2%] text-[15px] text-black md:mr-[-2%] lg:mr-[-20%]">
   <div className="flex flex-col mb-4 md:mr-8 ">
     <ul className="mb-2 md:mb-6">
       <li>about us</li>
@@ -66,7 +65,7 @@ const Footer = () => {
       <li>services</li>
     </ul>
   </div>
-  <div className="flex flex-col mb-4 md:mr-8 ">
+  <div className="flex flex-col mb-4  mr-0 md:mr-8 ">
     <ul className="mb-2 md:mb-6">
       <li>work</li>
     </ul>
@@ -85,7 +84,7 @@ const Footer = () => {
 </div>
 
 
-<div className="flex items-center space-x-5 md:mt-0 mb-[-1%] md:mr-[-25%]">
+<div className="flex items-center space-x-5 md:mt-0 mb-[-1%] md:mr-[-6%] lg:mr-[-25%]">
   <div className="text-[15px] text-center md:text-left">
     <p className="mb-2 md:mb-6 md:mr-16 ">info@codlinear.com</p>
     <p>+14155235957</p>
@@ -93,7 +92,8 @@ const Footer = () => {
 </div>
 
 
-            <div className="flex flex-wrap items-start justify-start  md:justify-center space-x-0 md:space-x-5 mb-4 md:mb-8 md:mr-[-5%]">
+            <div className=" flex flex-wrap md:flex-row  lg:flex-row items-start justify-start  md:justify-center space-x-2 md:space-x-0 lg:space-x-4 mb-4 md:mb-8 lg:mb-8 mr-0 md:mr-[1%] lg:mr-[1%]">
+       
                    <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -106,6 +106,8 @@ const Footer = () => {
                   fill="#000000"
                 />
               </svg>
+              
+              
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -156,9 +158,10 @@ const Footer = () => {
               </svg>
             
           </div>
+         
         </div>
         <div
-  className="text-center  text-[15px] text-gray-600 md:text-left mr-auto"
+  className="text-center  text-[15px] text-gray-600 md:text-left mt-2 md:mt-[-45px] lg:mt-[-8px] md:mb-12 lg:mb-12 mr-auto md:ml-4"
   
 >
   &copy; Codlinear 2023. All rights reserved.

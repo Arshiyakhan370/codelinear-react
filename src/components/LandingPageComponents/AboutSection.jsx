@@ -192,6 +192,7 @@ const AboutSection = ({ myState, setMyState }) => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };

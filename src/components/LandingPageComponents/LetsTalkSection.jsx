@@ -7,7 +7,7 @@ const LetsTalkSection = () => {
         <div className="text-lg md:text-2xl text-black ">Wanna Know a Secret?</div>
       </div>
      <div className=" w-full h-48">
-      <div className=" text-4xl md:text-9xl text-center p-2  md:p-8  ml-[42%] mt-28 ] ">
+      <div className=" text-4xl md:text-9xl lg:text-9xl text-center p-2  md:p-8  ml-[44%]  mt-28 ] ">
         <h1 className=" top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-500 hover:opacity-100 "style={{color:"white",textShadow:" 8px 16px 32px #DCDCDC"}}>
           LET'S TALK
         </h1>
