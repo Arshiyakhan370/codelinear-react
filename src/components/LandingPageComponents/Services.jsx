@@ -8,8 +8,7 @@ const Services = () => {
   const sections = [
     {
       title: "Consulting and Strategy",
-      items: [""],
-      items1: [
+         items1: [
         "Market Research",
         "Stakeholder Workshops",
         "Product Strategy and Roadmapping",
@@ -70,35 +69,37 @@ const Services = () => {
       >
         {sections.map(({ title, items, items1, items2 }, index) => (
           <SwiperSlide key={index}>
-           <div
+            
+              <div
   key={index}
-  className="relative flex md:flex-grow flex-row justify-end space-x-1  "
+  className="relative flex md:flex-grow flex-row justify-end space-x-1"
 >
-  <h1 className="text-4xl md:text-8xl  lg:text-[171px] font-normal top-[15vh] md:top-[320px] lg:top-[320px] w-[80vw] md:w-[150vw] lg:w-[1665.16px] h-[50vh] md:h-[20vh] lg:h-[500px] mb-[3vh] md:mb-[15vh] lg:mb-[50px] leading-[10vw] md:leading-[15vw] lg:leading-[220px] tracking-normal text-center md:text-left lg:text-left  uppercase text-[#2C2C2C]">
+  <h1 className="text-4xl md:text-8xl lg:text-[171px] font-normal top-[15vh] md:top-[55vh] lg:top-[220px] w-[80vw] md:w-[150vw] lg:w-[1665.16px] h-[50vh] md:h-[20vh] lg:h-[500px] mb-80 md:mb-[15vh] lg:mb-[50px] leading-[10vw] md:leading-[130px] lg:leading-[220px] tracking-normal mr-10 md:mr-0 lg:mr-0 text-center md:text-left lg:text-left  uppercase text-[#2C2C2C]">
     {title}
   </h1>
- {items && (
-                <ul className="text-[12px] border border-red-700 md:text-[7px] lg:text-[12px] mt-20 md:mt-2 lg:mt:2    text-center md:text-left lg:text-left font-400 uppercase list-none absolute flex-col top-4 md:bottom-0 lg:bottom-0  left-28 md:left-[500px] lg:left-[872px] md:w-[16%] lg:w-[13%] md:h-[30] lg:h-[36] b-58 md:mb-[240px] lg:mb-[367px]">
+
+              {items && (
+                <ul className="text-[12px]  md:text-[7px] lg:text-[12px] mt-24 md:mt-2 lg:mt:2    text-center md:text-left lg:text-left font-400 uppercase list-none absolute flex-col bottom:0 md:bottom-0 lg:bottom-0  left-[100px] md:left-[500px] lg:left-[872px] md:w-[16%] lg:w-[13%] md:h-[30] lg:h-[36] mb-32 md:mb-[270px] lg:mb-[367px]">
                   {items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="lg:mb-3 mb:mb-1 mb-3">
+                    <li key={itemIndex} className="mb-3">
                       {item}
                     </li>
                   ))}
                 </ul>
               )}
               {items1 && (
-                <ul className="text-[12px]  md:text-[7px] lg:text-[12px] mt-20 md:mt-2 lg:mt:2   text-center md:text-left lg:text-left font-400 uppercase list-none absolute flex-col  top-0 md:top-0 lg:top-0 left-auto right-14 lg:right-0 md:right-0 md:w-[16%] lg:w-[16%] lg:h-[36] md:mb-[220px] lg:mb-[367px]">
+                <ul className="text-[12px]  md:text-[7px] lg:text-[12px] mt-20 md:mt-2 lg:mt:2   text-center md:text-left lg:text-left font-400 uppercase list-none absolute flex-col  top-0 md:top-0 lg:top-0 left-auto right-12 md:right-0 lg:right-0 md:w-[16%] lg:w-[16%] lg:h-[36] mb-16 md:mb-[220px] lg:mb-[367px]">
                   {items1.map((item, itemIndex) => (
-                    <li key={itemIndex} className="lg:mb-3 mb:mb-1 mb-3">
+                    <li key={itemIndex} className="mb-3">
                       {item}
                     </li>
                   ))}
                 </ul>
               )}
               {items2 && (
-                <ul className="text-[12px]  md:text-[7px] lg:text-[12px] mt-20 md:mt-2 lg:mt:2   text-center md:text-left lg:text-left font-400 uppercase list-none absolute flex-col  top-14 md:bottom-0 lg:bottom-0 left-44 md:left-[400px] lg:left-[720px] md:w-[12%] lg:w-[16%] lg:h-[36] md:mb-[300px] lg:mb-[360px]">
+                <ul className="text-[12px]  md:text-[7px] lg:text-[12px] mt-20 md:mt-2 lg:mt:2   text-left md:text-left lg:text-left font-400 uppercase list-none absolute flex-col  bottom:0 md:bottom-0 lg:bottom-0  left-[140px] md:left-[400px] lg:left-[720px] md:w-[12%] lg:w-[16%] lg:h-[36] mb-[50px] md:mb-[250px] lg:mb-[367px]">
                   {items2.map((item, itemIndex) => (
-                    <li key={itemIndex} className="lg:mb-3 mb:mb-1 mb-3">
+                    <li key={itemIndex} className="mb-3">
                       {item}
                     </li>
                   ))}
