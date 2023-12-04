@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import image1 from "../../assets/images/Frame 567 (1).png";
 import image2 from "../../assets/images/Frame 567 (2).png";
@@ -49,13 +48,13 @@ const Portfolio = () => {
 
   return (
     <Fragment>
-      <div className="flex flex-col sm:flex-row mt-8">
+      <div className="flex flex-col sm:flex-row mt-[-30%] md:mt-8 lg:mt-8">
         <div className="w-full sm:w-1/2 p-1">
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl px-1 py-2 sm:py-8 lg:py-11 ml-7 mt-4 text-[#100E0E]">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl px-1 py-2 sm:py-2 lg:py-11 ml-7 mt-4 text-[#100E0E]">
             PORTFOLIO
           </h1>
         </div>
-        <div className="w-full sm:w-[50%] lg:w-[40%] sm:mr-8 ml-[-4%]  text-[#100E0E]">
+        <div className="w-full  sm:w-[100%] lg:w-[41%]  sm:mr-[-2%] ml-4  md:ml-[-4%] lg:ml-[-2%]  text-[#100E0E]">
           <p className="mb-1 mt-16 text-sm sm:text-base lg:text-lg">
             Id donec rutrum mauris venenatis ac. Id metus lorem mus sit magna
             varius cum proin. Accumsan volutpat natoque purus pellentesque nec

@@ -10,7 +10,7 @@ const AboutSection = ({setMyState}) => {
 const [isHover, SetIsHover] = useState(false);
 
     const handleHover = () => {
-        // setMyState(true);
+        
         gsap.to(document.getElementsByClassName("myClass")[0], {
             background:
                 "conic-gradient(from 180deg at 44.4% 50%,#46200D, #D4A381 43.31266522407532deg, #46200D 360deg)",
@@ -24,7 +24,7 @@ const [isHover, SetIsHover] = useState(false);
     };
 
     const handleMouseLeave = () => {
-        // setMyState(false);
+       
         gsap.to(document.getElementsByClassName("myClass")[0], {
             background: "initial",
             color: "initial",
@@ -39,13 +39,13 @@ const [isHover, SetIsHover] = useState(false);
     return (
         <div className='pr-12 pb-12 hoverEffect pt-[220px] myClass' onMouseEnter={() => { handleHover("hoverEffect", "toChangeColor", "toChangeGradientBg"); SetIsHover(true); setMyState(true) }} onMouseLeave={() => { handleMouseLeave("hoverEffect", "toChangeColor", "toChangeGradientBg"); SetIsHover(false); setMyState(false) }}>
             <div className='flex flex-col mb-[100px] space-y-3 md:space-x-12'>
-                <h1 className='text-4xl md:text-[70px] lg:text-[80px] leading-[90px] toChangeColor   ml-10 uppercase lg:w-[60vw] mainHeading'>Amet magnis diam varius viverra at</h1>
+                <h1 className='text-4xl md:text-[70px] lg:text-[80px] md:leading-[90px] lg:leading-[90px] toChangeColor   ml-6 md:ml-10 lg:ml-10 uppercase lg:w-[60vw] mainHeading'>Amet magnis diam varius viverra at</h1>
                 <div className='flex flex-col'>
-                    <div className='w-[100%] md:w-[34%] flex flex-col space-y-16 ml-14 mr-32 pr-10 md:ml-auto'>
+                    <div className='w-[89%] md:w-[34%] flex flex-col space-y-16 ml-14   mr-32 pr-10 md:ml-auto'>
                         <p className='toChangeColor paraGraph text-[16.5px]'>Id donec rutrum mauris venenatis ac.Id metus lorem mus sit magna
                             Varius cum proin. Accumsan volutpat natoque purus pellentesque nec ac
                             nulla turpis consectetur. Fermentum ut non commodo lacus enim.</p>
-                        <div className='relative text-right mr-12 toChangeColor about-us'>About Us
+                        <div className='relative text-right mr-32 md:mr-12 lg:mr-12 toChangeColor about-us'>About Us
                             {/* circle */}
                             <div>
                                 {isHover ? <svg

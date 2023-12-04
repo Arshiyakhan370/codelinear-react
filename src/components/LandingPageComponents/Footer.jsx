@@ -9,25 +9,23 @@ const Footer = () => {
     const logoContainer = document.querySelector(".logo-container");
 
     gsap.to(".logo-container", {
-      scale: 1.1,
-      duration: 1,
-      paused: true,
-      reversed: true,
+      x: "-100%", 
+      opacity: 1,
+      duration: 2,
       ease: 'power3.inOut',
     });
 
     const interval = setInterval(() => {
       setIsLogoVisible((prev) => !prev);
-      gsap.to(".logo-container", { reversed: !isLogoVisible });
+      gsap.to(".logo-container", { x: "0%", opacity: 1, duration: 1 });
     }, 1000);
 
-    
     logoContainer.addEventListener("mouseenter", () => {
-      gsap.to(".logo-container", { scale: 1.2, duration: 0.5, ease: 'power3.inOut' });
+      gsap.to(".logo-container", { x: "-100%", opacity: 0, duration: 1, ease: 'power3.inOut' });
     });
 
     logoContainer.addEventListener("mouseleave", () => {
-      gsap.to(".logo-container", { scale: 1, duration: 0.5, ease: 'power3.inOut' });
+      gsap.to(".logo-container", { x: "-100%", opacity: 1, duration: 1, ease: 'power3.inOut' });
     });
 
     return () => {
@@ -36,23 +34,20 @@ const Footer = () => {
       logoContainer.removeEventListener("mouseleave", () => {});
     };
   }, []);
-
   return (
     <footer className="py-4 border border-gray-200">
       <div className="container mx-auto  flex-col md:flex-row lg:flex-row">
         <div className="flex flex-col md:flex-row justify-between items-center mt-24 ml-10">
           <div className="logo-container relative w-48 h-16 md:mb-[15%] lg:mb-4 text-left mr-32 md:mr-3 lg:mr-0">
             <p
-              className={`logo-text text-3xl mt-4 md:ml-[-8%]  text-black ${isLogoVisible ? "hidden" : "block"}`}
-              style={{ opacity: isLogoVisible ? 1 : 1 }}
+              className={`logo-text text-3xl mt-4 md:ml-[-8%] text-black ${isLogoVisible ? "block" : "hidden"}`}
             >
               near to impact
             </p>
             <img
               src={image}
               alt="Company Logo"
-              className={`w-24 h-12 mx-auto mb-4 md:mb-44 lg:mb-24  md:ml-[-8%] mr-48 md:mr-0 lg:mr-0 logo-image ${isLogoVisible ? "block" : "hidden"}`}
-              style={{ opacity: isLogoVisible ? 1 : 0 }}
+              className={`w-24 h-12 mx-auto mb-4 md:mb-44 lg:mb-24 md:ml-[-8%] mr-48 md:mr-0 lg:mr-0 logo-image ${isLogoVisible ? "hidden" : "block"}`}
             />
           </div>
           

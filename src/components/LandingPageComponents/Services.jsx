@@ -53,7 +53,7 @@ const Services = () => {
       SERVICES
     </h1>
   </div>
-  <div className="md:w-[45%] lg:w-[36%] h-auto p-1 mt-4 md:mt-[4%]  lg:mt-[5%] mr-4 md:mr-[8%] lg:mr-[10%] ml-4 md:ml-[-4%] text-[#100E0E]">
+  <div className="md:w-[45%] lg:w-[37%] h-auto p-1 mt-4 md:mt-[4%]  lg:mt-[5%] mr-4 md:mr-[8%] lg:mr-[10%] ml-4 md:ml-[-4%] text-[#100E0E]">
     <p className="mb-1 text-xs md:text-sm lg:text-base">
       Id donec rutrum mauris venenatis ac. Id metus lorem mus sit magna varius cum proin. Accumsan volutpat natoque
       purus pellentesque nec ac nulla turpis consectetur. Fermentum ut non commodo lacus enim.
@@ -74,7 +74,7 @@ const Services = () => {
   key={index}
   className="relative flex md:flex-grow flex-row justify-end space-x-1"
 >
-  <h1 className="text-4xl md:text-8xl lg:text-[171px] font-normal top-[15vh] md:top-[55vh] lg:top-[220px] w-[80vw] md:w-[150vw] lg:w-[1665.16px] h-[50vh] md:h-[20vh] lg:h-[500px] mb-80 md:mb-[15vh] lg:mb-[50px] leading-[10vw] md:leading-[130px] lg:leading-[220px] tracking-normal mr-10 md:mr-0 lg:mr-0 text-center md:text-left lg:text-left  uppercase text-[#2C2C2C]">
+  <h1 className="text-4xl md:text-8xl lg:text-[171px] font-normal top-[15vh] md:top-[55vh] lg:top-[220px] w-[80vw] md:w-[150vw] lg:w-[1665.16px] h-[2px] md:h-[20vh] lg:h-[500px] mb-96 md:mb-[15vh] lg:mb-[50px] leading-[10vw] md:leading-[130px] lg:leading-[220px] tracking-normal mr-10 md:mr-0 lg:mr-0 text-center md:text-left lg:text-left  uppercase text-[#2C2C2C]">
     {title}
   </h1>
 

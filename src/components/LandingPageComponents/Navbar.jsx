@@ -54,7 +54,7 @@ const Navbar = () => {
             {logo}
           </div>
 
-          <div className="flex items-center  z-50 space-x-4 fixed right-[1%]  text-[#100E0E]">
+          <div className="flex items-center  z-50 space-x-4 fixed right-[4%]  text-[#100E0E]">
             <ul className={`flex nav-menu mr-16 md:mr-24 lg:mr-32 ${isMenuOpen ? 'visible' : 'hidden'} space-x-4 mt-10`}>
               <li className="mt-7 text-xs">about Us</li>
               <li className="mt-7 text-xs">services</li>
