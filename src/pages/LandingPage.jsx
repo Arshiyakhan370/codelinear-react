@@ -19,7 +19,7 @@ const LandingPage = () => {
             <AboutSection myState={myState} setMyState={setMyState}/>
             <Services />
             <Portfolio/>
-            <Industries/>
+            <Industries  setMyState={setMyState}/>
             <LetsTalkSection/>
             <Footer/>
         </Fragment>

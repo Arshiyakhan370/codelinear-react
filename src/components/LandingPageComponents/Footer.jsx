@@ -21,7 +21,7 @@ const Footer = () => {
       gsap.to(".logo-container", { reversed: !isLogoVisible });
     }, 1000);
 
-    // Add zoom in/out effect on mouse enter/leave
+    
     logoContainer.addEventListener("mouseenter", () => {
       gsap.to(".logo-container", { scale: 1.2, duration: 0.5, ease: 'power3.inOut' });
     });
@@ -39,11 +39,11 @@ const Footer = () => {
 
   return (
     <footer className="py-4 border border-gray-200">
-      <div className="container mx-auto">
+      <div className="container mx-auto  flex-col md:flex-row lg:flex-row">
         <div className="flex flex-col md:flex-row justify-between items-center mt-24 ml-10">
-          <div className="logo-container relative w-48 h-16 md:mb-12 lg:mb-4">
+          <div className="logo-container relative w-48 h-16 md:mb-[15%] lg:mb-4 text-left mr-32 md:mr-3 lg:mr-0">
             <p
-              className={`logo-text text-3xl mt-4 md:ml-[-8%] text-black ${isLogoVisible ? "hidden" : "block"}`}
+              className={`logo-text text-3xl mt-4 md:ml-[-8%]  text-black ${isLogoVisible ? "hidden" : "block"}`}
               style={{ opacity: isLogoVisible ? 1 : 1 }}
             >
               near to impact
@@ -51,30 +51,30 @@ const Footer = () => {
             <img
               src={image}
               alt="Company Logo"
-              className={`w-24 h-12 mx-auto mb-4 md:mb-44 lg:mb-24 md:ml-[-8%] logo-image ${isLogoVisible ? "block" : "hidden"}`}
+              className={`w-24 h-12 mx-auto mb-4 md:mb-44 lg:mb-24  md:ml-[-8%] mr-48 md:mr-0 lg:mr-0 logo-image ${isLogoVisible ? "block" : "hidden"}`}
               style={{ opacity: isLogoVisible ? 1 : 0 }}
             />
           </div>
           
-          <div className="flex flex-col md:flex-row mt-2 md:mt-0 mb-[-2%] text-[15px] text-black md:mr-[-2%] lg:mr-[-20%]">
-  <div className="flex flex-col mb-4 md:mr-8 ">
-    <ul className="mb-2 md:mb-6">
+          <div className=" flex flex-col md:flex-row mt-2  md:mt-[-15%] lg:mt-0 mb-[-2%]  text-[20px] md:text-[15px] lg:text-[15px] text-black mr-36 md:mr-[-66%] lg:mr-[-20%]">
+  <div className=" flex flex-row md:flex-col lg:flex-col mb-4 md:mr-8 ">
+    <ul className="mb-2 md:mb-6  mr-10 md:mr-20 lg:mr-0">
       <li>about us</li>
     </ul>
     <ul>
       <li>services</li>
     </ul>
   </div>
-  <div className="flex flex-col mb-4  mr-0 md:mr-8 ">
-    <ul className="mb-2 md:mb-6">
+  <div className="flex flex-row md:flex-col lg:flex-col mb-4  mr-0 md:mr-8 ">
+    <ul className="mb-2 md:mb-6 mr-10 md:mr-20 lg:mr-0">
       <li>work</li>
     </ul>
     <ul>
       <li>career</li>
     </ul>
   </div>
-  <div className="flex flex-col ">
-    <ul className="mb-2 md:mb-6">
+  <div className=" flex flex-row md:flex-col lg:flex-col mb-4  mr-0 md:mr-8">
+    <ul className="mb-2 md:mb-6  mr-10 md:mr-20 lg:mr-0">
       <li>idea</li>
     </ul>
     <ul>
@@ -84,15 +84,15 @@ const Footer = () => {
 </div>
 
 
-<div className="flex items-center space-x-5 md:mt-0 mb-[-1%] md:mr-[-6%] lg:mr-[-25%]">
-  <div className="text-[15px] text-center md:text-left">
+<div className="flex items-center space-x-5 md:mt-0 mb-[-1%] md:mb-[-20%] lg:mb-[-1%] mr-40 md:mr-4 lg:mr-[-25%]">
+  <div className="text-[20px] md:text-[15px] lg:text-[15px] text-left">
     <p className="mb-2 md:mb-6 md:mr-16 ">info@codlinear.com</p>
     <p>+14155235957</p>
   </div>
 </div>
 
 
-            <div className=" flex flex-wrap md:flex-row  lg:flex-row items-start justify-start  md:justify-center space-x-2 md:space-x-0 lg:space-x-4 mb-4 md:mb-8 lg:mb-8 mr-0 md:mr-[1%] lg:mr-[1%]">
+            <div className=" text-[20px] md:text-[15px] lg:text-[15px] flex flex-wrap md:flex-row  lg:flex-row items-start justify-start  md:justify-center space-x-2 md:space-x-0 lg:space-x-4 mb-[-5px] md:mb-[-20%] lg:mb-8 mr-56 md:mr-12 lg:mr-[1%] mt-4 md:mt-0 lg:mt-0 w-auto md:w-10 lg:w-auto">
        
                    <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -161,10 +161,10 @@ const Footer = () => {
          
         </div>
         <div
-  className="text-center  text-[15px] text-gray-600 md:text-left mt-2 md:mt-[-45px] lg:mt-[-8px] md:mb-12 lg:mb-12 mr-auto md:ml-4"
+  className="text-left text-[20px] md:text-[20px] lg:text-[15px] w-[174px] md:w-[174px] lg:w-auto h-auto   text-gray-600  mt-6 md:mt-[-45px] lg:mt-[-8px] md:mb-12 lg:mb-12 mr-8 md:mr-0 lg:mr-0 ml-14 md:ml-4 lg:md-4"
   
 >
-  &copy; Codlinear 2023. All rights reserved.
+  &copy; Codelinear 2023. All Rights Reserved.
 </div>
 
 

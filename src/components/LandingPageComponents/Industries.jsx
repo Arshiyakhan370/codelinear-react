@@ -3,7 +3,7 @@ import image from "../../assets/images/shubham-dhage-05rC4c5-oWw-unsplash 2.png"
 
 import { handleMouseEnter, handleMouseLeave } from '../GSAPanimation/GSAPaniation';
 
-const Industries = () => {
+const Industries = ({ setMyState }) => {
 const [isImgShow, setisImgShow] = useState(true);
     const [isHover, SetIsHover] = useState(false);
     const serve = [
@@ -24,11 +24,11 @@ const [isImgShow, setisImgShow] = useState(true);
     }
 
     return (
-        <div className='pr-12 pb-12 hoverEffect pt-[220px]' onMouseEnter={() => { handleMouseEnter("hoverEffect", "toChangeColor"); SetIsHover(true) }} onMouseLeave={() => { handleMouseLeave("hoverEffect", "toChangeColor"); SetIsHover(false) }}>
+        <div className='pr-12 pb-12 hoverEffect pt-[220px]' onMouseEnter={() => { handleMouseEnter("hoverEffect", "toChangeColor"); SetIsHover(true); setMyState(true) }} onMouseLeave={() => { handleMouseLeave("hoverEffect", "toChangeColor"); SetIsHover(false); setMyState(true)}}>
             <div className='flex flex-col mb-[100px] space-y-3 md:space-x-12 md:flex-row'>
                 <h1 className='text-4xl md:text-[70px] lg:text-[80px] leading-[90px] toChangeColor ml-10'>INDUSTRIES WE SERVED</h1>
                 <div className='flex flex-col'>
-                    <p className=' text-[18px] toChangeColor ml-5 md:ml-0 lg:ml-20 mr-24'>Id donec rutrum mauris venenatis ac.Id metus lorem mus sit magna
+                    <p className=' text-[18px] toChangeColor ml-5 md:ml-0 lg:ml-20 mr-28'>Id donec rutrum mauris venenatis ac.Id metus lorem mus sit magna
                         Varius cum proin. Accumsan volutpat natoque purus pellentesque nec ac nulla turpis consectetur. Fermentum ut non commodo lacus enim.</p>
                     <div className='relative text-right mt-24 mr-44 toChangeColor'>SERVICES
                         {/* circle */}
@@ -131,7 +131,7 @@ const [isImgShow, setisImgShow] = useState(true);
                             serve.map(item => {
                                 const randomNum = Math.random();
                                 return (
-                                    <li className=' text-white mb-12 text-2xl md:text-4xl toChangeColor pl-10 hover:!text-[#567f3e] hover:py-4 w-screen text-center transition duration-400 ease-in-out md:text-left hover:bg-[#d3daa7]' onMouseEnter={() => { setisImgShow(false); clearTimeout(id) }} onMouseLeave={() => mouseLeaveHandler()} key={randomNum}>{item}</li>
+                                    <li className=' mb-12 text-2xl md:text-7xl toChangeColor pl-10 hover:!text-[#567f3e] hover:py-4 w-screen text-center transition duration-400 ease-in-out md:text-left hover:bg-[#d3daa7]' onMouseEnter={() => { setisImgShow(false); clearTimeout(id) }} onMouseLeave={() => mouseLeaveHandler()} key={randomNum}>{item}</li>
                                 )
                             })
                         }
