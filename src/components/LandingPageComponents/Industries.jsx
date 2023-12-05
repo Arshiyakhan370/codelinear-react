@@ -6,6 +6,7 @@ import { gsap } from 'gsap';
 import { handleMouseEnter, handleMouseLeave } from '../GSAPanimation/GSAPaniation';
 import { useEffect } from 'react';
 import _gsap from 'gsap/gsap-core';
+import IndustryList from './IndustryList';
 
 const Industries = ({ setMyState }) => {
 const [isImgShow, setisImgShow] = useState(true);
@@ -171,17 +172,12 @@ const [isImgShow, setisImgShow] = useState(true);
                 />}
                 <div className='w-screen'>
                     <ul className='flex flex-col text-left items:center md:items-center  lg:items-left uppercase text-xl md:text-2xl lg:text-2xl w-[100%] '>
-                        {
-                            serve.map(item => {
-                                const randomNum = Math.random();
-                                return (
-                                    <li className= {`${isColorChange ? "text-[#F5FF9D]": "" } mb-4 md:mb-8 lg:mb-12  text-xl md:text-2xl left1  lg:md:text-2xl  text-left  toChangeColor pl-10   hover:text-fixed hover:!text-[#567f3e] hover:py-2 hover:w-screen  hover:text-left transition duration-400 ease-in-out lg:text-left hover:bg-[#d3daa7] hover:text-3xl hover:md:text-5xl  hover:lg:text-7xl toChangeColor`} onMouseEnter={() => { setisImgShow(false); clearTimeout(id) }} onMouseLeave={() => mouseLeaveHandler()} key={randomNum}>{item.tittle}
-                                </li>
-                                )
-                            })
-                        }
-                           
-                       
+                    {serve.map(item => {
+                            const randomNum = Math.random();
+                            return (
+                                <IndustryList item={item.tittle} subText={item.item1} setisImgShow={setisImgShow} clearTimeout={clearTimeout} mouseLeaveHandler={mouseLeaveHandler} randomNum={randomNum} id={id} isImgShow={isImgShow}/>
+                            );
+                        })}
                     </ul>
                 </div>
             </div>

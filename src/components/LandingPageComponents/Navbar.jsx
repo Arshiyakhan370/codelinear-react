@@ -52,14 +52,14 @@ const Navbar = () => {
 
   return (
     <nav className="">
-      <div className="container ml-[3.5%] ">
-        <div className="flex items-center justify-between">
+      <div className="container ml-[3.5%]">
+        <div className="flex items-center justify-between  border border-red-900">
           <div className="w-[99px] h-[55.706px] flex-shrink-0 z-50 fixed top-0">
             {logo}
           </div>
 
-          <div className=" flex items-center  space-x-4 fixed right-[4%]  text-[#100E0E]">
-            <ul className={`menu-ul  flex   md:mr-56 lg:mr-56 ${isMenuOpen ? 'visible' : 'visible'} space-x-4 mt-10`}>
+          <div className=" flex items-center z-50 space-x-4 fixed right-0  text-[#100E0E]">
+            <ul className={`menu-ul flex md:mr-56 lg:mr-56 ${isMenuOpen ? 'visible' : 'visible'} space-x-4 mt-10`}>
               <li className="mt-7 text-xs">about Us</li>
               <li className="mt-7 text-xs">services</li>
               <li className="mt-7 text-xs">works</li>
@@ -76,7 +76,7 @@ const Navbar = () => {
       </div>
       <div className="lg:hidden md:hidden">
     {isMenuOpen && (
-        <div className=" w-screen  h-[100vh] bg-black bg-opacity-100  flex items-center justify-center">
+        <div className=" w-screen  border fixed z-[999] h-[100vh] bg-black bg-opacity-100  flex items-center justify-center">
           <nav>
             
             <button className="text-black focus:outline-none  ml-44" onClick={toggleMenu}>
