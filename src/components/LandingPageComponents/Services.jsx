@@ -74,7 +74,7 @@ const Services = () => {
   key={index}
   className="relative flex md:flex-grow flex-row justify-end space-x-1"
 >
-  <h1 className="text-4xl md:text-8xl lg:text-[171px] font-normal top-[15vh] md:top-[55vh] lg:top-[220px] w-[80vw] md:w-[150vw] lg:w-[1665.16px] h-[2px] md:h-[20vh] lg:h-[500px] mb-96 md:mb-[15vh] lg:mb-[50px] leading-[10vw] md:leading-[130px] lg:leading-[220px] tracking-normal mr-10 md:mr-0 lg:mr-0 text-center md:text-left lg:text-left  uppercase text-[#2C2C2C]">
+  <h1 className="text-4xl md:text-8xl lg:text-[171px] font-normal top-[15vh] md:top-[55vh] lg:top-[220px] w-[80vw] md:w-[150vw] lg:w-[1665.16px] h-[2px] md:h-[20vh] lg:h-[500px] mb-96 md:mb-[15vh] lg:mb-[50px] leading-[10vw] md:leading-[130px] lg:leading-[180px] tracking-normal mr-10 md:mr-0 lg:mr-0 text-center md:text-left lg:text-left  uppercase text-[#2C2C2C]">
     {title}
   </h1>
 
@@ -97,7 +97,7 @@ const Services = () => {
                 </ul>
               )}
               {items2 && (
-                <ul className="text-[12px]  md:text-[7px] lg:text-[12px] mt-20 md:mt-2 lg:mt:2   text-left md:text-left lg:text-left font-400 uppercase list-none absolute flex-col  bottom:0 md:bottom-0 lg:bottom-0  left-[140px] md:left-[400px] lg:left-[720px] md:w-[12%] lg:w-[16%] lg:h-[36] mb-[50px] md:mb-[250px] lg:mb-[367px]">
+                <ul className="text-[12px]  md:text-[7px] lg:text-[12px] mt-20 md:mt-[-20%] lg:mt:2   text-center md:text-left lg:text-left font-400 uppercase list-none absolute flex-col  bottom:0 md:bottom-0 lg:bottom-0  left-[100px] md:left-[400px] lg:left-[720px] md:w-[12%] lg:w-[16%] lg:h-[36] mb-[50px] md:mb-[250px] lg:mb-[367px]">
                   {items2.map((item, itemIndex) => (
                     <li key={itemIndex} className="mb-3">
                       {item}

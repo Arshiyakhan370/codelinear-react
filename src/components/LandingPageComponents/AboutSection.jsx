@@ -37,11 +37,11 @@ const [isHover, SetIsHover] = useState(false);
     };
 
     return (
-        <div className='pr-12 pb-12 hoverEffect pt-[220px] myClass' onMouseEnter={() => { handleHover("hoverEffect", "toChangeColor", "toChangeGradientBg"); SetIsHover(true); setMyState(true) }} onMouseLeave={() => { handleMouseLeave("hoverEffect", "toChangeColor", "toChangeGradientBg"); SetIsHover(false); setMyState(false) }}>
+        <div className='pr-12 pb-12 hoverEffect pt-[100px]  md:pt-[120px] lg:pt-[220px] myClass' onMouseEnter={() => { handleHover("hoverEffect", "toChangeColor", "toChangeGradientBg"); SetIsHover(true); setMyState(true) }} onMouseLeave={() => { handleMouseLeave("hoverEffect", "toChangeColor", "toChangeGradientBg"); SetIsHover(false); setMyState(false) }}>
             <div className='flex flex-col mb-[100px] space-y-3 md:space-x-12'>
-                <h1 className='text-4xl md:text-[70px] lg:text-[80px] md:leading-[90px] lg:leading-[90px] toChangeColor   ml-6 md:ml-10 lg:ml-10 uppercase lg:w-[60vw] mainHeading'>Amet magnis diam varius viverra at</h1>
+                <h1 className='text-3xl  md:text-[70px] lg:text-[80px] md:leading-[90px] lg:leading-[90px] toChangeColor  sm:-12 ml-4 md:ml-10 lg:ml-10 uppercase lg:w-[60vw] mainHeading'>Amet magnis diam varius viverra at</h1>
                 <div className='flex flex-col'>
-                    <div className='w-[89%] md:w-[34%] flex flex-col space-y-16 ml-14   mr-32 pr-10 md:ml-auto'>
+                    <div className='w-[100%] sm:w-[96%] md:w-[100%] lg:w-[34%] flex flex-col space-y-16 ml-14   mr-32 pr-10 md:ml-auto'>
                         <p className='toChangeColor paraGraph text-[16.5px]'>Id donec rutrum mauris venenatis ac.Id metus lorem mus sit magna
                             Varius cum proin. Accumsan volutpat natoque purus pellentesque nec ac
                             nulla turpis consectetur. Fermentum ut non commodo lacus enim.</p>

@@ -27,9 +27,9 @@ const HeroSection = ({ myState }) => {
 
   return (
     <Fragment>
-      <div className="relative px-11 py-11 mt-[10%]">
-        <div className=" max-w-4xl">
-          <h1 className="text-[#100E0E] font-almarai text-3xl md:text-7xl lg:text:7xl font-normal  uppercase">PROPELLING THE WORLD, BY DESIGN. </h1>
+      <div className="relative px-12 py-12 mt-[10%]">
+        <div className=" max-w-2xl">
+          <h1 className="text-[#100E0E] font-almarai text-2xl md:text-6xl lg:text:7xl font-normal  uppercase">PROPELLING THE WORLD, BY DESIGN. </h1>
           
         </div>
         <ul

@@ -51,7 +51,7 @@ const Footer = () => {
             />
           </div>
           
-          <div className=" flex flex-col md:flex-row mt-2  md:mt-[-15%] lg:mt-0 mb-[-2%]  text-[20px] md:text-[15px] lg:text-[15px] text-black mr-36 md:mr-[-66%] lg:mr-[-20%]">
+          <div className=" flex flex-col  md:flex-row mt-2  md:mt-[-15%] lg:mt-0 mb-[-2%]  text-[20px] md:text-[15px] lg:text-[15px] text-black mr-36 sm:mr-36 md:mr-[-66%] lg:mr-[-20%]">
   <div className=" flex flex-row md:flex-col lg:flex-col mb-4 md:mr-8 ">
     <ul className="mb-2 md:mb-6  mr-10 md:mr-20 lg:mr-0">
       <li>about us</li>
@@ -87,7 +87,7 @@ const Footer = () => {
 </div>
 
 
-            <div className=" text-[20px] md:text-[15px] lg:text-[15px] flex flex-wrap md:flex-row  lg:flex-row items-start justify-start  md:justify-center space-x-2 md:space-x-0 lg:space-x-4 mb-[-5px] md:mb-[-20%] lg:mb-8 mr-56 md:mr-12 lg:mr-[1%] mt-4 md:mt-0 lg:mt-0 w-auto md:w-10 lg:w-auto">
+            <div className=" text-[20px] md:text-[15px] lg:text-[15px] flex flex-wrap md:flex-row  lg:flex-row items-start justify-start  md:justify-center space-x-2 md:space-x-0 lg:space-x-4 mb-[-5px] md:mb-[-20%] lg:mb-8 mr-44 ms:mr-56 md:mr-12 lg:mr-[1%] mt-4 md:mt-0 lg:mt-0 w-auto md:w-10 lg:w-auto ml-[-44px]">
        
                    <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +156,7 @@ const Footer = () => {
          
         </div>
         <div
-  className="text-left text-[20px] md:text-[20px] lg:text-[15px] w-[174px] md:w-[174px] lg:w-auto h-auto   text-gray-600  mt-6 md:mt-[-45px] lg:mt-[-8px] md:mb-12 lg:mb-12 mr-8 md:mr-0 lg:mr-0 ml-14 md:ml-4 lg:md-4"
+  className="text-left text-[20px] md:text-[20px] lg:text-[15px] w-[174px] md:w-[174px] lg:w-auto h-auto   text-gray-600  mt-6 md:mt-[-45px] lg:mt-[-8px] md:mb-12 lg:mb-12 mr-8 md:mr-0 lg:mr-0 sm:ml-8 ml-10 md:ml-4 lg:md-4"
   
 >
   &copy; Codelinear 2023. All Rights Reserved.

@@ -7,20 +7,10 @@ import { handleMouseEnter, handleMouseLeave } from '../GSAPanimation/GSAPaniatio
 import { useEffect } from 'react';
 import _gsap from 'gsap/gsap-core';
 
-const Industries = ({ setMyState }) => {
-const [isImgShow, setisImgShow] = useState(true);
+const Practice = ({ setMyState }) => {
+    const [isImgShow, setisImgShow] = useState(true);
     const [isHover, SetIsHover] = useState(false);
     const [isColorChange, setIsColorChange]= useState(false)
-    const serve = [{tittle:"Fintech", item:"KULB | MIDDLE |KARNEL WEALTH |TRADEJINI"},
-        
-    {tittle:"Technology",item1:"DEAL | BOOKIN FACTORY"},
-    {tittle:   "Ecommerce",item1:""},
-    {tittle: "Supply chain and logistics",item1: "CONVOY"},
-    {tittle:"Healthcare",item1:"LYRA HEALTH | HINGE HEALTH"},
-    {tittle: "Food and beverages",item1:"Britania | Leaf And Hive "},
-    {tittle: "Biopharmaceutical", item1:"impact"},
-    {tittle: "Manufacturing",item1:""}
-    ];
     let id;
     const mouseLeaveHandler = () => {
         id = setTimeout(() => {
@@ -40,7 +30,6 @@ const [isImgShow, setisImgShow] = useState(true);
         markers: true 
       }
     });
-
     useEffect(() => {
         gsap.to(".left1", {
             visibility: "visible",
@@ -62,8 +51,8 @@ const [isImgShow, setisImgShow] = useState(true);
         }
       });
     }, []);
-
-    return (
+  return (
+    <div>
         <div className='pr-12 pb-12 hoverEffect pt-[80px]  md:pt-[120px] lg:pt-[220px]' onMouseEnter={() => { handleMouseEnter("hoverEffect", "toChangeColor"); SetIsHover(true); setMyState(true);setIsColorChange(true) }} onMouseLeave={() => { handleMouseLeave("hoverEffect", "toChangeColor"); SetIsHover(false); setMyState(true);setIsColorChange(false)}}>
             <div className='flex flex-col mb-[100px] space-y-3 md:space-x-12 md:flex-row'>
                 <h1 className='text-3xl md:text-[70px] lg:text-[80px] leading-[40px] md:leading-[90px] lg:leading-[90px] toChangeColor  mr-16 md:mr-0 lg:mr-0 ml-16 md:ml-10 lg:ml-10'>INDUSTRIES WE SERVED</h1>
@@ -71,7 +60,7 @@ const [isImgShow, setisImgShow] = useState(true);
                 <div className='w-[100%] md:w-[180%] lg:w-[75%]  text-[18px]  mt-0 md:mt-44 lg:mt-0 toChangeColor ml-5 md:ml-[-130%] lg:ml-20 mr-24'>
                     <p >Id donec rutrum mauris venenatis ac.Id metus lorem mus sit magna
                         Varius cum proin. Accumsan volutpat natoque purus pellentesque nec ac nulla turpis consectetur. Fermentum ut non commodo lacus enim.</p>
-                    <div className='relative text-right mt-16 md:mt-16  lg:mt-24 mr-32  md:mb-12 toChangeColor'>SERVICES
+                    <div className='relative text-right mt-16 md:mt-24 lg:mt-24 mr-44 toChangeColor'>SERVICES
                         {/* circle */}
                         <div>
                              {!isHover ? <svg
@@ -167,28 +156,14 @@ const [isImgShow, setisImgShow] = useState(true);
                 {isImgShow && <img
                     src={image}
                     alt="Your Alt Text"
-                    className={`max-w-[628px] max-h-[607px] mr-8 md:mr-0 lg:mr-0 ml-4 md:ml-12 lg:ml-12 mt-5 md:mt-[-60px] lg: lg:mt-[-50px]  text-center md:text-left lg:text-left transition-opacity duration-300 ease-in-out imgClass ${isImgShow ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+                    className={`max-w-[628px] max-h-[607px] mr-8 md:mr-0 lg:mr-0 ml-4 md:ml-12 lg:ml-12 mt-5 md:mt-[-50px] lg: lg:mt-[-50px]  text-center md:text-left lg:text-left transition-opacity duration-300 ease-in-out imgClass ${isImgShow ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
                 />}
-                <div className='w-screen'>
-                    <ul className='flex flex-col text-left items:center md:items-center  lg:items-left uppercase text-xl md:text-2xl lg:text-2xl w-[100%] '>
-                        {
-                            serve.map(item => {
-                                const randomNum = Math.random();
-                                return (
-                                    <li className= {`${isColorChange ? "text-[#F5FF9D]": "" } mb-4 md:mb-8 lg:mb-12  text-xl md:text-2xl left1  lg:md:text-2xl  text-left  toChangeColor pl-10   hover:text-fixed hover:!text-[#567f3e] hover:py-2 hover:w-screen  hover:text-left transition duration-400 ease-in-out lg:text-left hover:bg-[#d3daa7] hover:text-3xl hover:md:text-5xl  hover:lg:text-7xl toChangeColor`} onMouseEnter={() => { setisImgShow(false); clearTimeout(id) }} onMouseLeave={() => mouseLeaveHandler()} key={randomNum}>{item.tittle}
-                                </li>
-                                )
-                            })
-                        }
-                           
-                       
-                    </ul>
-                </div>
             </div>
-        </div>
-        </div>
-        </div>
-    )
+            </div>
+            </div>
+            </div>
+    </div>
+  )
 }
 
-export default Industries;
+export default Practice

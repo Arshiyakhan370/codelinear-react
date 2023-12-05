@@ -8,6 +8,7 @@ import Portfolio from '../components/LandingPageComponents/Portfolio'
 import Industries from '../components/LandingPageComponents/Industries'
 import Footer from '../components/LandingPageComponents/Footer'
 import LetsTalkSection from '../components/LandingPageComponents/LetsTalkSection'
+import Practice from '../components/LandingPageComponents/Practice'
 
 const LandingPage = () => {
     const [myState, setMyState] = useState(false);
@@ -20,6 +21,7 @@ const LandingPage = () => {
             <Services />
             <Portfolio/>
             <Industries  setMyState={setMyState}/>
+            
             <LetsTalkSection/>
             <Footer/>
         </Fragment>
