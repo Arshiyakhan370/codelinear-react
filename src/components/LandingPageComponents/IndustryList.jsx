@@ -1,89 +1,39 @@
 import gsap from 'gsap';
-import React, { Fragment, useEffect, useRef, useState } from 'react'
+import React, { Fragment } from 'react';
 
-const IndustryList = ({ item, setisImgShow, clearTimeout, mouseLeaveHandler, randomNum, id,isImgShow,subText }) => {
-    const [showList, setShowList] = useState(false)
-// useEffect(() => {
-//     gsap.to(".left-bottom-ing", { opacity: 0, pointerEvents: "none", duration: 8.3 });
-   
-//     gsap.to(".one-list", { background: "#D30AA7", duration: 8.3 });
-   
-//     gsap.to(".right-concept", {
-//       background: "#D3D4A7",
-//       width: "600%",
-//       duration: 8.3
-//     });
-   
-//     gsap.to(".middel", {
-//       background: "#D3DAA7",
-//       duration: 0.3
-//     });
-   
-//     gsap.to(".left1", {
-//       visibility: "visible",
-//       y: "e",
-//       rotate: "e",
-//       duration: 2.3
-//     });
-   
-//     gsap.to(".middel", {
-//       background: "#D30AA7",
-//       width: "600%",
-//       visibility: "hidden",
-//       duration: 8.3
-//     });
-   
-//     gsap.to(".left1", { visibility: "visible", y: "e", rotate: "e", duration: 0.3 });
-   
-//     gsap.to(".righti", { visibility: "visible", duration: 0.3 });
-//   }, []);
+const IndustryList = ({ item, subText }) => {
+  const onEnterBack = () => {
+    gsap.to(".left1", { visibility: "visible", y: "0", rotate: "0", duration: 2.3 });
+    gsap.to('.opacity', { opacity: 0, duration: 0.5, delay: 0.3 });
+  };
 
-// const textRef = useRef(null);
-// const nullRef = useRef(null)
+  const onEnter = () => {
+    gsap.to(".left1", { opacity: 1, visibility: "visible", x: "-10", rotate: "10", duration: 2.3 });
+    gsap.to('.opacity', { opacity: 1, duration: 0.5, delay: 0.3 });
+  };
 
-// useEffect(() => {
-//   if (!isImgShow) {
-//     const tl = gsap.timeline();
+  return (
+    <Fragment>
+      <div
+        className="left1 opacity transform-animation hover:left-bottom-img py-5 text-[25px] md:text-[25px] flex group justify-start w-1/2 ml-14 md:!ml-[40%] lg:!ml-[40%] hover:!ml-0 hover:z-[100] lg:text-3xl text-center md:text-left lg:text-left toChangeColor pl-14 transition duration-400 ease-in-out toChangeColor hover:!text-[#567f3e] hover:w-screen hover:bg-[#d3daa7] hover:text-2xl hover:md:text-4xl hover:lg:text-7xl"
+        onMouseEnter={onEnter}
+        onMouseLeave={onEnterBack}
+      >
+        {item}
+        <div className='mt-8 font-bold ml-44 text-[15px] hidden group-hover:block'>
+          <span className='text-[#567f3e] text-[20px] !mb-[50%] ml-56'>
+            {subText &&
+              subText?.split(' ').map((itm, index) => {
+                if (itm === '|') {
+                  return <span key={index} className='mx-5 text-[#567f3e]'>{itm}</span>;
+                }
+                return <span key={index} className='text-[#567f3e]'>{itm}</span>;
+              })}
+          </span>
+        </div>
+      </div>
+    </Fragment>
+  );
+};
 
-//     tl.from(textRef.current, {
-//       y: 100,
-//       rotation: 10,
-//       duration: 0.5,
-//       ease: 'power2.out',
-//     });
-//   }
-// }, [isImgShow]);
-
-    return (
-        <Fragment>
-            {/* {showList ? */}
-            <li
-                className={`transform-animation mb-12 text-xl md:text-3xl item center lg:md:text-3xl text-left toChangeColor pl-10 transition duration-400 ease-in-out lg:text-left toChangeColor hover:!text-[#567f3e]  hover:w-screen hover:text-left hover:bg-[#d3daa7] hover:text-5xl hover:md:text-7xl`}
-                onMouseEnter={() => { setisImgShow(false); clearTimeout(id); setShowList(false) }}
-                onMouseLeave={() => { mouseLeaveHandler(); setShowList(true) }}
-                key={randomNum}
-            >
-                <div className={`${!isImgShow && "pl-[50%]"} hover:pl-0 hover:py-4 transition duration-100`}>
-                   {item}
-                   {!showList && subText !=='' && 
-                 (
-                    <span className='text-[#567f3e] text-[20px] !mb-[50%] ml-56'>
-                      {
-                        subText && subText?.split(' ').map((itm, index) => {
-                          if (itm === '|') {
-                            return <span key={index} className='mx-5 text-[#567f3e]'>{itm}</span>;
-                          }
-                          return <span key={index} className='text-[#567f3e]'>{itm}</span>;
-                        })
-                      }
-                    </span>
-                  )
-                   }
-                </div>
-            </li>
-
-        </Fragment>
-    )
-}
-
-export default IndustryList
+export default IndustryList;

@@ -9,6 +9,7 @@ import Industries from '../components/LandingPageComponents/Industries'
 import Footer from '../components/LandingPageComponents/Footer'
 import LetsTalkSection from '../components/LandingPageComponents/LetsTalkSection'
 import Practice from '../components/LandingPageComponents/Practice'
+import NewIndus from '../components/LandingPageComponents/NewIndus'
 
 const LandingPage = () => {
     const [myState, setMyState] = useState(false);
@@ -21,7 +22,7 @@ const LandingPage = () => {
             <Services />
             <Portfolio/>
             <Industries  setMyState={setMyState}/>
-            
+            {/* <NewIndus/> */}
             <LetsTalkSection/>
             <Footer/>
         </Fragment>
