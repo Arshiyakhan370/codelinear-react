@@ -15,7 +15,7 @@ const IndustryList = ({ item, subText }) => {
   return (
     <Fragment>
       <div
-        className=".left1 opacity transform-animation hover:left-bottom-img py-5 text-[25px] md:text-[25px] flex group justify-start w-1/2 ml-14 md:!ml-[40%] lg:!ml-[40%] hover:!ml-0 hover:z-[100] lg:text-3xl text-center md:text-left lg:text-left toChangeColor pl-14 transition duration-400 ease-in-out toChangeColor hover:!text-[#567f3e] hover:w-screen hover:bg-[#d3daa7] hover:text-2xl hover:md:text-4xl hover:lg:text-7xl"
+        className=" opacity transform-animation hover:left-bottom-img py-5 text-[25px] md:text-[25px] flex group justify-start w-1/2 ml-14 md:!ml-[40%] lg:!ml-[40%] hover:!ml-0 hover:z-[100] lg:text-3xl text-center md:text-left lg:text-left toChangeColor pl-14 transition duration-400 ease-in-out toChangeColor hover:!text-[#567f3e] hover:w-screen hover:bg-[#d3daa7] hover:text-2xl hover:md:text-4xl hover:lg:text-7xl"
         onMouseEnter={onEnter}
         onMouseLeave={onEnterBack}
       >
