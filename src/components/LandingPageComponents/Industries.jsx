@@ -242,10 +242,10 @@ const Industries = ({ setMyState }) => {
                 />} */}
                         <div className='w-screen flex flex-col md:fle-col lg:flex-row'  onMouseEnter={() => { setisImgShow(false); clearTimeout(id) }}
                 onMouseLeave={() => { setisImgShow(false) ; mouseLeaveHandler()  }}
-                key={""}>
+                >
                             <ul className='flex flex-col text-left items:center md:items-center  lg:items-left uppercase text-xl md:text-2xl lg:text-2xl w-[100%] mt-0 md:mt-0 lg:mt-0 '>
                                 {serve.map(item => {
-                                    const randomNum = Math.random();
+                                    {/* const randomNum = Math.random(); */}
                                     return (
                                         <IndustryList item={item.tittle} subText={item.item1} setisImgShow={setisImgShow} clearTimeout={clearTimeout} mouseLeaveHandler={mouseLeaveHandler} randomNum={randomNum} id={id} isImgShow={isImgShow}
                                          />

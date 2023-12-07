@@ -8,7 +8,7 @@ const IndustryList = ({ item, subText }) => {
   };
 
   const onEnter = () => {
-    gsap.to(".left1", { opacity: 1, visibility: "visible", x: "-10", rotate: "10", duration: 2.3 });
+    gsap.to(".left1", { opacity: 1, visibility: "visible", y: "-20" , rotate: "1", duration: 2.3 });
     gsap.to('.opacity', { opacity: 1, duration: 0.5, delay: 0.3 });
   };
 
