@@ -245,7 +245,7 @@ const Industries = ({ setMyState }) => {
                 >
                             <ul className='flex flex-col text-left items:center md:items-center  lg:items-left uppercase text-xl md:text-2xl lg:text-2xl w-[100%] mt-0 md:mt-0 lg:mt-0 '>
                                 {serve.map(item => {
-                                    {/* const randomNum = Math.random(); */}
+                                    const randomNum = Math.random();
                                     return (
                                         <IndustryList item={item.tittle} subText={item.item1} setisImgShow={setisImgShow} clearTimeout={clearTimeout} mouseLeaveHandler={mouseLeaveHandler} randomNum={randomNum} id={id} isImgShow={isImgShow}
                                          />
